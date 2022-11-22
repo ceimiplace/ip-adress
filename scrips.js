@@ -1,4 +1,5 @@
 const map = L.map("map");
+
 let queryString = new URLSearchParams({
   apiKey: "at_KFty41RO0VuNz2swz5QJdFTsM15D1",
 });
@@ -25,6 +26,7 @@ function DisplayLocation() {
     .then((resp) => resp.json())
     .then((data) => {
       console.log(data);
+
       ipAdress.textContent = data.ip;
       locationInfo.textContent =
         data.location.city + "," + data.location.region;
@@ -32,6 +34,8 @@ function DisplayLocation() {
       isp.textContent = data.isp;
       let latitude = data.location.lat;
       let longitude = data.location.lng;
+      const marker = L.marker([latitude, longitude]).addTo(map);
+      marker.bindPopup("<b>Found it for you master").openPopup();
       map.setView([latitude, longitude], 13);
       console.log(data.ip);
     })

@@ -31,15 +31,37 @@
   grid-row: 2;
   z-index: 1;
 }
+/* input design */
+.button-search {
+  width: 50px;
+  background-color: black;
+  position: absolute;
+  right: 100px;
+  height: 100%;
+  right: 0;
+}
 .input-container {
   width: 80%;
   max-width: 555px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 .input-header {
-  margin-top: 26px;
-  margin-bottom: 29px;
+  height: 100%;
+  width: 100%;
+  padding: 18px 24px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #2c2c2c;
+  outline: none;
 }
 .header-heading-text {
+  margin-bottom: 26px;
   color: white;
 }
 .informations {
@@ -105,5 +127,11 @@
   }
   .information-text {
     font-size: 12px;
+  }
+  .header-heading-text {
+    font-size: 32px;
+    line-height: 30px;
+
+    letter-spacing: -0.285714px;
   }
 }
